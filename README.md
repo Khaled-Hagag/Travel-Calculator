@@ -57,9 +57,17 @@ dotnet run
 ### . Frontend
 افتح `Frontend/index.html` في المتصفح مباشرة أو قدّمه عبر أي HTTP server.
 
-## سير العمل الأساسي
+## سير العمل الأساسي  
 
 1. اختر مدينتين (انطلاق → وجهة)
 2. حدد أيام الدوام وبيانات السيارة (اختياري)
 3. اضغط "احسب التكلفة" — تظهر المواصلات، السيارة، السكن
 4. احفظ كـ "سيناريو" للمقارنة لاحقاً
+
+
+<img width="625" height="937" alt="Screenshot 2026-07-05 024658" src="https://github.com/user-attachments/assets/7e5d8952-3288-47d8-b5bd-eb792b5fd329" />
+<img width="1270" height="1017" alt="Screenshot 2026-07-05 024831" src="https://github.com/user-attachments/assets/95aa254f-2eb6-46a2-9563-a2b0abdee868" />
+<img width="620" height="933" alt="Screenshot 2026-07-05 024717" src="https://github.com/user-attachments/assets/8aa3e1a3-80da-4bbc-9bac-2db51b1077f2" />
+<img width="1882" height="865" alt="Screenshot 2026-07-05 024618" src="https://github.com/user-attachments/assets/0af1b4d6-ba9b-4c6e-892b-b52490cf921c" />
+<img width="1270" height="1002" alt="Screenshot 2026-07-05 024838" src="https://github.com/user-attachments/assets/edbf3d0b-95b4-487f-9ddc-c3944b4e5482" />
+
