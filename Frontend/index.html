@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة تكاليف السفر والسكن</title>
+    <meta name="description" content="قارن بين تكلفة السفر اليومي وتكلفة السكن بأسهل طريقة">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="glass-panel">
+            <h1><i class="fa-solid fa-route"></i> حاسبة تكاليف السفر والسكن</h1>
+            <p>قارن بين تكلفة السفر اليومي وتكلفة السكن بأسهل طريقة</p>
+        </header>
+
+        <main>
+            <!-- Inputs Section -->
+            <div class="inputs-section glass-panel">
+                <div class="form-grid">
+                    <!-- Cities -->
+                    <div class="form-group">
+                        <label for="fromCity"><i class="fa-solid fa-location-dot"></i> مدينة الانطلاق</label>
+                        <select id="fromCity">
+                            <option value="">جاري التحميل...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="toCity"><i class="fa-solid fa-building"></i> مدينة العمل/الدراسة</label>
+                        <select id="toCity">
+                            <option value="">جاري التحميل...</option>
+                        </select>
+                    </div>
+
+                    <!-- Work Days -->
+                    <div class="form-group">
+                        <label for="daysPerWeek"><i class="fa-regular fa-calendar-days"></i> أيام الدوام في الأسبوع</label>
+                        <input type="number" id="daysPerWeek" min="1" max="7" value="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weeksPerMonth"><i class="fa-regular fa-calendar"></i> أسابيع الدوام في الشهر</label>
+                        <input type="number" id="weeksPerMonth" min="1" max="4" value="4">
+                    </div>
+
+                    <!-- Car details -->
+                    <div class="form-group">
+                        <label for="fuelType"><i class="fa-solid fa-gas-pump"></i> نوع الوقود (للسيارة)</label>
+                        <select id="fuelType">
+                            <option value="">جاري التحميل...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="consumption"><i class="fa-solid fa-gauge-high"></i> استهلاك الوقود (لتر/100كم)</label>
+                        <input type="number" id="consumption" min="1" max="50" value="8" step="0.1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passengerCount"><i class="fa-solid fa-users"></i> عدد الركاب (لتقسيم التكلفة)</label>
+                        <input type="number" id="passengerCount" min="1" max="10" value="1">
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="calculateBtn" class="btn-primary">
+                        <i class="fa-solid fa-calculator"></i> احسب التكلفة
+                    </button>
+                    <button id="saveScenarioBtn" class="btn-save">
+                        <i class="fa-solid fa-bookmark"></i> حفظ كسيناريو
+                    </button>
+                </div>
+            </div>
+
+            <!-- Saved Scenarios Section -->
+            <div id="scenariosSection" class="scenarios-section glass-panel">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-folder-open"></i> سيناريوهاتي المحفوظة</h2>
+                    <span id="scenariosCount" class="badge">0</span>
+                </div>
+                <div id="scenariosContainer" class="scenarios-grid">
+                    <div class="empty-state">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <p>جاري تحميل السيناريوهات...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loader -->
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p>جاري الحساب...</p>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="results-section hidden">
+
+                <!-- Routes -->
+                <div class="result-card glass-panel fade-in">
+                    <h2><i class="fa-solid fa-bus"></i> تكلفة المواصلات العامة</h2>
+                    <div id="routesContainer" class="cards-grid">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Car -->
+                <div class="result-card glass-panel fade-in" style="animation-delay: 0.1s;">
+                    <h2><i class="fa-solid fa-car"></i> تكلفة السيارة الخاصة</h2>
+                    <div id="carContainer" class="data-display">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Housing -->
+                <div class="result-card glass-panel fade-in" style="animation-delay: 0.2s;">
+                    <h2><i class="fa-solid fa-house"></i> السكن مقابل السفر</h2>
+                    <div id="housingContainer" class="cards-grid">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- =============================================
+         Modal: حفظ سيناريو جديد
+         الخطوة 1: اسم السيناريو ونوعه
+    ============================================= -->
+    <div id="scenarioModal" class="modal">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="modal-icon"><i class="fa-solid fa-bookmark"></i></div>
+                    <div>
+                        <h2>حفظ سيناريو جديد</h2>
+                        <p class="modal-subtitle">سمّي السيناريو واختر نوع الخيار</p>
+                    </div>
+                </div>
+                <button id="closeModalBtn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body">
+                <!-- اسم السيناريو -->
+                <div class="form-group">
+                    <label for="scName"><i class="fa-solid fa-tag"></i> اسم السيناريو</label>
+                    <input type="text" id="scName" placeholder="مثال: مشوار الجامعة، سكن المدينة..." class="form-control">
+                </div>
+
+                <!-- نوع الخيار -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-layer-group"></i> نوع الخيار اللي هتحفظه</label>
+                    <div class="type-selector">
+                        <label class="type-option" id="typeCommute">
+                            <input type="radio" name="scType" value="Commute" checked>
+                            <div class="type-card">
+                                <i class="fa-solid fa-van-shuttle"></i>
+                                <span>مواصلات</span>
+                            </div>
+                        </label>
+                        <label class="type-option" id="typeCarTrip">
+                            <input type="radio" name="scType" value="CarTrip">
+                            <div class="type-card">
+                                <i class="fa-solid fa-car"></i>
+                                <span>سيارة</span>
+                            </div>
+                        </label>
+                        <label class="type-option" id="typeHousing">
+                            <input type="radio" name="scType" value="Housing">
+                            <div class="type-card">
+                                <i class="fa-solid fa-house"></i>
+                                <span>سكن</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- تحديد الخيار (إذا كان هناك أكثر من خيار) -->
+                <div class="form-group" id="specificItemContainer" style="display: none;">
+                    <label for="scSpecificItem"><i class="fa-solid fa-list-check"></i> اختر الخيار المفضل</label>
+                    <select id="scSpecificItem" class="form-control">
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+
+                <!-- اسم الخيار -->
+                <div class="form-group">
+                    <label for="scItemName"><i class="fa-solid fa-pen"></i> اسم الخيار</label>
+                    <input type="text" id="scItemName" placeholder="مثال: قطر / سكن جامعي / عربيتي..." class="form-control">
+                </div>
+
+                <!-- معاينة التكلفة -->
+                <div id="costPreview" class="cost-preview">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span id="costPreviewText">اختر النوع لمعاينة التكلفة المحسوبة</span>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="confirmSaveScenarioBtn" class="btn-primary"><i class="fa-solid fa-check"></i> حفظ</button>
+                <button id="cancelModalBtn" class="btn-secondary">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+         Modal: تفاصيل السيناريو (Items)
+    ============================================= -->
+    <div id="scenarioDetailModal" class="modal">
+        <div class="modal-content modal-wide glass-panel">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="modal-icon modal-icon--green"><i class="fa-solid fa-folder-open"></i></div>
+                    <div>
+                        <h2 id="detailScenarioName">تفاصيل السيناريو</h2>
+                        <p class="modal-subtitle" id="detailScenarioType">—</p>
+                    </div>
+                </div>
+                <button id="closeDetailModalBtn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body">
+                <div id="scenarioItemsList" class="items-list">
+                    <!-- Filled by JS -->
+                </div>
+
+                <div id="noItemsMsg" class="empty-state small hidden">
+                    <i class="fa-solid fa-box-open"></i>
+                    <p>لا توجد خيارات محفوظة في هذا السيناريو بعد.</p>
+                </div>
+
+                <!-- زرار إضافة خيار -->
+                <button id="addItemToScenarioBtn" class="btn-add-item">
+                    <i class="fa-solid fa-plus"></i> إضافة خيار للسيناريو ده
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

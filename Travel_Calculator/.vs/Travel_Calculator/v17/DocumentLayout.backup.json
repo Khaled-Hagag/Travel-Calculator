@@ -1,0 +1,94 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\Travel_Calculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F88696D-535B-48E7-98F2-AF1E51ED8DA7}|..\\TravelCalculatorDataLayer\\TravelCalculatorDataLayer.csproj|c:\\users\\khale\\onedrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\travel calculator project\\travelcalculatordatalayer\\clsscenariodata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95982A8E-13AA-44A3-92E7-867CD097E02B}|..\\TravelCalculatorBussinessLayer\\TravelCalculatorBussinessLayer.csproj|c:\\users\\khale\\onedrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\travel calculator project\\travelcalculatorbussinesslayer\\clsscenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AA54A6C-5A15-4BB4-A759-79C0A1E85E43}|Travel_Calculator.csproj|c:\\users\\khale\\onedrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\travel calculator project\\travel_calculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AA54A6C-5A15-4BB4-A759-79C0A1E85E43}|Travel_Calculator.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AA54A6C-5A15-4BB4-A759-79C0A1E85E43}|Travel_Calculator.csproj|c:\\users\\khale\\onedrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\travel calculator project\\travel_calculator\\controllers\\scenariosapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AA54A6C-5A15-4BB4-A759-79C0A1E85E43}|Travel_Calculator.csproj|solutionrelative:controllers\\scenariosapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ScenariosAPIController.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\Travel_Calculator\\Controllers\\ScenariosAPIController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ScenariosAPIController.cs",
+              "ToolTip": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\Travel_Calculator\\Controllers\\ScenariosAPIController.cs",
+              "RelativeToolTip": "Controllers\\ScenariosAPIController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAYwMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T04:42:31.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\Travel_Calculator\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\Travel_Calculator\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T01:15:17.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsScenario.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\TravelCalculatorBussinessLayer\\clsScenario.cs",
+              "RelativeDocumentMoniker": "..\\TravelCalculatorBussinessLayer\\clsScenario.cs",
+              "ToolTip": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\TravelCalculatorBussinessLayer\\clsScenario.cs",
+              "RelativeToolTip": "..\\TravelCalculatorBussinessLayer\\clsScenario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T04:30:50.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsScenarioData.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\TravelCalculatorDataLayer\\clsScenarioData.cs",
+              "RelativeDocumentMoniker": "..\\TravelCalculatorDataLayer\\clsScenarioData.cs",
+              "ToolTip": "C:\\Users\\khale\\OneDrive\\\u0633\u0637\u062D \u0627\u0644\u0645\u0643\u062A\u0628\\Travel Calculator project\\TravelCalculatorDataLayer\\clsScenarioData.cs",
+              "RelativeToolTip": "..\\TravelCalculatorDataLayer\\clsScenarioData.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAmwGAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T04:30:10.565Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
