@@ -6,6 +6,6 @@ namespace DataAccessLayer
     public class clsDataAccessSettings
     {
 
-        public static string ConnectionString = "Server=.;Database=TravelCalculatorDB;User Id=sa;Password=3634999;TrustServerCertificate=True;";
+        public static string ConnectionString = "Server=.;Database=TravelCalculatorDB;User Id=sa;Password=;TrustServerCertificate=True;";
     }
 }
