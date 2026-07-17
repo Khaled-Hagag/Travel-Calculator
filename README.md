@@ -64,7 +64,7 @@ dotnet run
 3. اضغط "احسب التكلفة" — تظهر المواصلات، السيارة، السكن
 4. احفظ كـ "سيناريو" للمقارنة لاحقاً
 
-📸 Screenshots From Projict
+📸 Screenshots From Project
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0af1b4d6-ba9b-4c6e-892b-b52490cf921c" width="80%" />
 </p>
